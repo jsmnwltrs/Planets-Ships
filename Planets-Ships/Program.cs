@@ -6,7 +6,6 @@ namespace Planets_Ships
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }
