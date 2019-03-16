@@ -21,10 +21,28 @@ namespace Planets_Ships
             planetList.Add("Pluto");
 
             List<string> rockyPlanets = new List<string>();
+            List<string> gasPlanets = new List<string>() { "Jupiter", "Saturn", "Uranus", "Neptune" };
 
             rockyPlanets = planetList.GetRange(0, 4);
 
+
             planetList.Remove("Pluto");
+
+            var shipsAndDestinations = new Dictionary<string, List<string>>
+            {
+                {"ToughShip", rockyPlanets},
+                {"FloatyShip", gasPlanets}
+            };
+
+            foreach (var (ship,planets) in shipsAndDestinations) {
+                Console.WriteLine($"{ship}: ");
+                foreach (var planet in planets)
+                {
+                    Console.WriteLine(planet);
+                }
+            } 
+
+           
 
             Console.ReadLine();
         }
